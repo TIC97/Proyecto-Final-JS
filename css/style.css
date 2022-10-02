@@ -1,0 +1,48 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.marcotext {
+    margin: 10px;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.marcolor {
+    background-color: grey;
+    border-color: black;
+}
+
+.container {
+    margin:auto;
+    background-color: grey;
+    border-style: solid;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row; 
+}
+
+.grid-container {
+    display: flex;
+    column-gap: 50px;
+    row-gap: 50px;
+}
+
+.grid-item {
+    margin: 10px;
+}

@@ -1,0 +1,25 @@
+*{
+    
+}
+
+body {
+    background-color: #9775AA;
+}
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+
+}
+.fondo-menu {
+    background-color:#260339;
+    width: 0;
+}
+li {
+    color: white;
+    margin: 10px;
+    
+}

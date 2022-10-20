@@ -26,15 +26,16 @@ document.getElementById("enviar").addEventListener("click", guardarRegistro()); 
 
 // NUEVA PRUEBA
 
-const nombre = document.getElementById('nombres')
+const nombre = document.getElementById('nombres'),
+    apellido = document.getElementById(''),
+    edad = document.getElementById(''),
+    pais = document.getElementById(''),
+    cuidad = document.getElementById(''),
+    email = document.getElementById(''),
+    telefono = document.getElementById('');
+
 console.log(nombre)
 
-// const apellido = prompt("Ingrese su  apellido")
-// const edad = prompt("Ingrese su edad")
-// const pais = prompt("Ingrese su pais")
-// const cuidad = prompt("Ingrese su  cuidad")
-// const email = prompt("Ingrese su email")
-// const telefono = prompt("Ingrese  su  telefono")
 // const identificacionMax = 10000;
 // const identificacionMin = 0;
 // function numberUser(min, max){

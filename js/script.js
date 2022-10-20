@@ -27,12 +27,12 @@ document.getElementById("enviar").addEventListener("click", guardarRegistro()); 
 // NUEVA PRUEBA
 
 const nombre = document.getElementById('nombres'),
-    apellido = document.getElementById(''),
-    edad = document.getElementById(''),
-    pais = document.getElementById(''),
-    cuidad = document.getElementById(''),
+    apellido = document.getElementById('apellidos'),
+    edad = document.getElementById('emails'),
+    pais = document.getElementById('paises'),
+    cuidad = document.getElementById('ciudades'),
     email = document.getElementById(''),
-    telefono = document.getElementById('');
+    telefono = document.getElementById('telefonos');
 
 console.log(nombre)
 

@@ -26,15 +26,26 @@ document.getElementById("enviar").addEventListener("click", guardarRegistro()); 
 
 // NUEVA PRUEBA
 
-const nombre = document.getElementById('nombres'),
-    apellido = document.getElementById('apellidos'),
-    edad = document.getElementById('emails'),
-    pais = document.getElementById('paises'),
-    cuidad = document.getElementById('ciudades'),
-    email = document.getElementById(''),
-    telefono = document.getElementById('telefonos');
+const nombre = document.getElementById('nombre'),
+    apellido = document.getElementById('apellido'),
+    email = document.getElementById('email'),
+    telefono = document.getElementById('telefono'),
+    pais = document.getElementById('pais'),
+    ciudad = document.getElementById('ciudad'),
+    password = document.getElementById('password'),
+    registro = document.getElementById('register');
 
 console.log(nombre)
+console.log(apellido);
+console.log(email);
+console.log(telefono);
+console.log(pais);
+console.log(ciudad);
+console.log(password);
+console.log(registro);
+
+registro.value = 'Registro !!!';
+
 
 // const identificacionMax = 10000;
 // const identificacionMin = 0;

@@ -35,7 +35,7 @@ const nombre = document.getElementById('nombre'),
     password = document.getElementById('password'),
     registro = document.getElementById('register');
 
-const section = document.getElementsByClassName('form-register');
+// const section = document.getElementsByClassName('form-register');
 
 //TEST DE LAS VARIABLES DECLARADAS
 console.log(nombre)

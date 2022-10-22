@@ -35,6 +35,9 @@ const nombre = document.getElementById('nombre'),
     password = document.getElementById('password'),
     registro = document.getElementById('register');
 
+const section = document.getElementsByClassName('form-register');
+
+//TEST DE LAS VARIABLES DECLARADAS
 console.log(nombre)
 console.log(apellido);
 console.log(email);
@@ -43,8 +46,11 @@ console.log(pais);
 console.log(ciudad);
 console.log(password);
 console.log(registro);
-
+console.log(section);
+//DOM (MODIFICO EL INPUT DE REGISTRO)
 registro.value = 'Registro !!!';
+
+
 
 
 // const identificacionMax = 10000;

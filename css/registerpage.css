@@ -50,7 +50,7 @@
     text-decoration: underline;
 }
 
-.form-register .botons {
+.form-register .btn  {
     width: 100%;
     background-color: #9974AA;
     border: none;
@@ -60,6 +60,7 @@
     font-size: 18px;
 }
 
-
-
-
+.btn:active {
+    background-color: #7D498D;
+    box-shadow:  5px #7D498D;
+}

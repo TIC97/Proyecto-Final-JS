@@ -35,6 +35,7 @@ const nombre = document.getElementById('nombre'),
     password = document.getElementById('password'),
     registro = document.getElementById('register');
 
+//MODIFICAR EL SECTION AGREGANDO ETIQUETAS HTML POR DOM
 // const section = document.getElementsByClassName('form-register');
 
 //TEST DE LAS VARIABLES DECLARADAS
@@ -46,7 +47,8 @@ console.log(pais);
 console.log(ciudad);
 console.log(password);
 console.log(registro);
-console.log(section);
+//console.log(section);
+
 //DOM (MODIFICO EL INPUT DE REGISTRO)
 registro.value = 'Registro !!!';
 

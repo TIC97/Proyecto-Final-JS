@@ -1,4 +1,4 @@
-// ESTO ES VIEJO UN PRIMER INTENTO
+// ***ESTO ES VIEJO UN PRIMER INTENTO
 
 /* class Registro {
     constructor(objeto){
@@ -22,9 +22,9 @@ function guardarRegistro() {
 };
 document.getElementById("enviar").addEventListener("click", guardarRegistro()); */
 
-// NO TOCAR ARRIBA 
+// ***NO TOCAR ARRIBA 
 
-// NUEVA PRUEBA
+// ***NUEVA PRUEBA
 
 const nombre = document.getElementById('nombre'),
     apellido = document.getElementById('apellido'),
@@ -35,7 +35,7 @@ const nombre = document.getElementById('nombre'),
     password = document.getElementById('password'),
     registro = document.getElementById('register');
 
-//MODIFICAR EL SECTION AGREGANDO ETIQUETAS HTML POR DOM (falta modificarla !!!)
+// ***MODIFICAR EL SECTION AGREGANDO ETIQUETAS HTML POR DOM (falta modificarla !!!)
 const section = document.getElementsByTagName('section')[0];
 
 //TEST DE LAS VARIABLES DECLARADAS
@@ -49,12 +49,25 @@ console.log(password);
 console.log(registro);
 console.log(section);
 
-//DOM (MODIFICO EL INPUT DE REGISTRO)
+// ***DOM (MODIFICO EL INPUT DE REGISTRO)
 registro.value = 'Registro !!!';
 
-// MODIFICO LA ETIQUETA SECTION (no me funciona)
-// section.innerHTML = "<p></p>";
+// *** MODIFICO LA ETIQUETA SECTION (averigaur si se puede definir lo que lleva dentro el elemento de una mejro forma)
 
+// let crearEti = document.createElement('input');
+// crearEti.className = "btn activo";
+// crearEti.type = "submit"
+// crearEti.value = "Registrar";
+
+// section.appendChild(crearEti);
+// ***ARRIBA AGREDO UN ELEMENTO UNICO HTML POR DOM
+
+// ***EVENTOS
+// ***CREAR FUNCION DENTRO DEL EVENTO PARA REGISTRAR AL USUARIO
+
+registro.addEventListener("click", () => {
+    console.log("Click");
+})
 
 
 
@@ -91,7 +104,7 @@ registro.value = 'Registro !!!';
 
 // console.log(datosUsuarios);
  
-// // FOR OF ? PARA RECORRER EL ARRAY, FILTER PARA DEVOLVER ID DE USER A TRAVEZ DE UN MAP
+// // ***FOR OF ? PARA RECORRER EL ARRAY, FILTER PARA DEVOLVER ID DE USER A TRAVEZ DE UN MAP
 
 // const cantidadUsers = datosUsuarios.map((el) => { return el.id})
 

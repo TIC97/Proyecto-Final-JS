@@ -8,7 +8,8 @@ const nombre = document.getElementById('nombre'),
     registro = document.getElementById('register');
 
 // ***MODIFICAR EL SECTION AGREGANDO ETIQUETAS HTML POR DOM (falta modificarla !!!)
-const section = document.getElementsByTagName('section')[0];
+// const section = document.getElementsByTagName('section')[0];
+const section = document.getElementsByTagName('form')[0];
 
 //TEST DE LAS VARIABLES DECLARADAS
 console.log(nombre)

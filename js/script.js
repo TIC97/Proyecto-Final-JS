@@ -1,31 +1,3 @@
-// ***ESTO ES VIEJO UN PRIMER INTENTO
-
-/* class Registro {
-    constructor(objeto){
-        this.nombre = objeto.nombreUser;
-        this.nacimiento = objeto.fechaNacimiento;
-        this.telefono = objeto.telefono;
-        this.email = objeto.email;
-        this.formaPago = objeto.formaPago;
-        this.fecha = new Date();
-        this.fecha_contacto = fecha.getDate() + " " + (fecha.getMonth() - 1) + " " + this.fecha.getFullYear();
-    }
-}
-function guardarRegistro() {
-    let registroNombre = document.getElementById("registroNombre").value;
-    let registroNacimiento = document.getElementById("registroNacimiento").value;
-    let registroTelefono = document.getElementById("registroTelefono").value;
-    let registroEmail = document.getElementById("registroEmail").value;
-    let registroFormaPago = document.getElementById("registroFormaPago").value;
-    const datosContacto = {nombre:registroNombre, nacimiento:registroNacimiento, telefono:registroTelefono, email:registroEmail, formaPago:registroFormaPago};
-    console.log(datosContacto)
-};
-document.getElementById("enviar").addEventListener("click", guardarRegistro()); */
-
-// ***NO TOCAR ARRIBA 
-
-// ***NUEVA PRUEBA
-
 const nombre = document.getElementById('nombre'),
     apellido = document.getElementById('apellido'),
     email = document.getElementById('email'),
@@ -52,7 +24,7 @@ console.log(section);
 // ***DOM (MODIFICO EL INPUT DE REGISTRO)
 registro.value = 'Registro !!!';
 
-// *** MODIFICO LA ETIQUETA SECTION (averigaur si se puede definir lo que lleva dentro el elemento de una mejro forma)
+// *** MODIFICO LA ETIQUETA SECTION (averigaur si se puede definir lo que lleva dentro el elemento de una mejoor forma)
 
 // let crearEti = document.createElement('input');
 // crearEti.className = "btn activo";
@@ -63,21 +35,44 @@ registro.value = 'Registro !!!';
 // ***ARRIBA AGREDO UN ELEMENTO UNICO HTML POR DOM
 
 // ***EVENTOS
+// ***CLICK EN EL BOTON REGISTRO (ME QUEDA INCORPORAR UN FILTRO QUE ME LLEVE LOS DATOS A MI ARRAY) TENGO QUE TRABAJAR CON LA PROPIEDAD TARGET ?
+
 registro.addEventListener("click", () => {
     console.log("Click");
 })
 
-const inputForm = document.querySelectorAll("input.text");
-console.log(inputForm);
+registro.addEventListener('submit', (e) => {
+    e.preventDefault()
+});
 
-// ***TOMAR TODOS LOS INPUT Y QUE CON UN EVENTO CHANGE CAMBIE DE CAMPO CUANDO PRESIONE TAB SIN TENER QUE LLAMAR A CADA UNO PODRIA HACERLO CON UN FOR OF
+// ***TOMAR TODOS LOS INPUT Y QUE CON UN EVENTO CHANGE CAMBIE DE CAMPO CUANDO PRESIONE TAB (MODIFIQUE EL HTML Y LE AGREGE UNA ETIQUETA   QUE LOS HACE "tabindex")
 
-// const bucleInput = () => {
-// };
-// bucleInput();
+// *** HACER UNA FUNCION QUE CAPTURE EL EVENTO UNO POR UNO
+
+    
+nombre.addEventListener('input', () =>{
+    console.log(nombre.value);
+});
+apellido.addEventListener('input', () =>{
+    console.log(apellido.value);
+});
+email.addEventListener('input', () =>{
+    console.log(email.value);
+});
+telefono.addEventListener('input', () =>{
+    console.log(telefono.value);
+});
+pais.addEventListener('input', () =>{
+    console.log(pais.value);
+});
+ciudad.addEventListener('input', () =>{
+    console.log(ciudad.value);
+});
+password.addEventListener('input', () =>{
+    console.log(password.value);
+});
 
 
-// ***CREAR FUNCION DENTRO DEL EVENTO PARA REGISTRAR AL USUARIO
 
 
 

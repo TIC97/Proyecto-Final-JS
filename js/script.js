@@ -63,11 +63,23 @@ registro.value = 'Registro !!!';
 // ***ARRIBA AGREDO UN ELEMENTO UNICO HTML POR DOM
 
 // ***EVENTOS
-// ***CREAR FUNCION DENTRO DEL EVENTO PARA REGISTRAR AL USUARIO
-
 registro.addEventListener("click", () => {
     console.log("Click");
 })
+
+const inputForm = document.querySelectorAll("input.text");
+console.log(inputForm);
+
+// ***TOMAR TODOS LOS INPUT Y QUE CON UN EVENTO CHANGE CAMBIE DE CAMPO CUANDO PRESIONE TAB SIN TENER QUE LLAMAR A CADA UNO PODRIA HACERLO CON UN FOR OF
+
+// const bucleInput = () => {
+// };
+// bucleInput();
+
+
+// ***CREAR FUNCION DENTRO DEL EVENTO PARA REGISTRAR AL USUARIO
+
+
 
 
 

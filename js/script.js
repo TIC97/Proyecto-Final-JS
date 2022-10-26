@@ -75,11 +75,6 @@ password.addEventListener('input', () =>{
 });
 
 
-
-
-
-
-
 // const identificacionMax = 10000;
 // const identificacionMin = 0;
 // function numberUser(min, max){

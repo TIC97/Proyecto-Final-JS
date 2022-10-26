@@ -9,7 +9,7 @@ const nombre = document.getElementById('nombre'),
 
 // ***MODIFICAR EL SECTION AGREGANDO ETIQUETAS HTML POR DOM (falta modificarla !!!)
 // const section = document.getElementsByTagName('section')[0];
-const section = document.getElementsByTagName('form')[0];
+const section = document.getElementsByTagName('section')[0];
 
 //TEST DE LAS VARIABLES DECLARADAS
 console.log(nombre)
@@ -43,7 +43,8 @@ registro.addEventListener("click", () => {
 })
 
 registro.addEventListener('submit', (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    console.log(e.target);
 });
 
 // ***TOMAR TODOS LOS INPUT Y QUE CON UN EVENTO CHANGE CAMBIE DE CAMPO CUANDO PRESIONE TAB (MODIFIQUE EL HTML Y LE AGREGE UNA ETIQUETA   QUE LOS HACE "tabindex")
@@ -113,7 +114,12 @@ password.addEventListener('input', () =>{
 // console.log(datosUsuarios);
  
 // // ***FOR OF ? PARA RECORRER EL ARRAY, FILTER PARA DEVOLVER ID DE USER A TRAVEZ DE UN MAP
+//  (***MEJORAR EL FILTRO ***)
 
 // const cantidadUsers = datosUsuarios.map((el) => { return el.id})
 
 // console.log(cantidadUsers);
+
+
+
+//  LOCAL STORAGE

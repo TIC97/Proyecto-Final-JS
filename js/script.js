@@ -47,6 +47,16 @@ registro.addEventListener('submit', (e) => {
     console.log(e.target);
 });
 
+registro.addEventListener('click', () => {
+    localStorage.setItem("Nombre", nombre.value)
+    localStorage.setItem("Apellido", apellido.value)
+    localStorage.setItem("Email", email.value)
+    localStorage.setItem("Telefono", telefono.value)
+    localStorage.setItem("Pais", pais.value)
+    localStorage.setItem("Ciudad", ciudad.value)
+    localStorage.setItem("Contraseña", password.value)
+});
+
 // ***TOMAR TODOS LOS INPUT Y QUE CON UN EVENTO CHANGE CAMBIE DE CAMPO CUANDO PRESIONE TAB (MODIFIQUE EL HTML Y LE AGREGE UNA ETIQUETA   QUE LOS HACE "tabindex")
 
 // *** HACER UNA FUNCION QUE CAPTURE EL EVENTO UNO POR UNO
@@ -118,3 +128,7 @@ password.addEventListener('input', () =>{
 
 
 //  LOCAL STORAGE
+
+/* const guardarLocalStorage = () => {
+    localStorage.setItem("Nombre", nombre.value)
+}; */

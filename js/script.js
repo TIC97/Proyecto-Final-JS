@@ -35,8 +35,8 @@ registro.value = 'Registro !!!';
 // section.appendChild(crearEti);
 // ***ARRIBA AGREDO UN ELEMENTO UNICO HTML POR DOM
 
-// ***EVENTOS
-// ***CLICK EN EL BOTON REGISTRO (ME QUEDA INCORPORAR UN FILTRO QUE ME LLEVE LOS DATOS A MI ARRAY) TENGO QUE TRABAJAR CON LA PROPIEDAD TARGET ?
+// *** EVENTOS Y LOCASTORAGE !!!
+// *** CLICK EN EL BOTON REGISTRO (ME QUEDA INCORPORAR UN FILTRO QUE ME LLEVE LOS DATOS A MI ARRAY) TENGO QUE TRABAJAR CON LA PROPIEDAD TARGET ?
 
 registro.addEventListener("click", () => {
     console.log("Click");
@@ -62,7 +62,7 @@ registro.addEventListener('click', () => {
 // *** HACER UNA FUNCION QUE CAPTURE EL EVENTO UNO POR UNO
 
     
-nombre.addEventListener('input', () =>{
+/* nombre.addEventListener('input', () =>{
     console.log(nombre.value);
 });
 apellido.addEventListener('input', () =>{
@@ -82,42 +82,50 @@ ciudad.addEventListener('input', () =>{
 });
 password.addEventListener('input', () =>{
     console.log(password.value);
-});
+}); */
 
 
-// const identificacionMax = 10000;
-// const identificacionMin = 0;
-// function numberUser(min, max){
-//     return Math.floor(Math.random() * (max - min) + min);
-// };
+// ***FUNCIONES !!!
+// ***FUNCION ID RANDOM 
 
+const identificacionMax = 10000;
+const identificacionMin = 0;
+function numberUser(min, max){
+    return Math.floor(Math.random() * (max - min) + min);
+};
 
-// const datosUsuarios = [];
+// ***ARRAY DE USAURIOS !!!
 
-// function Formulario (nombre, apellido, edad, pais, cuidad, email, telefono) {
-//     this.id = numberUser(identificacionMin, identificacionMax),
-//     this.nombre = nombre,
-//     this.apellido = apellido,
-//     this.edad = edad,
-//     this.pais = pais,
-//     this.cuidad = cuidad,
-//     this.email = email,
-//     this.telefono = telefono
-// }
+const datosUsuarios = [];
 
-// const nuevoUsuario = new Formulario(nombre, apellido, edad, pais, cuidad, email,telefono)
+// ***FUNCION COSNTRUCTORA !!!
+
+function Formulario (nombre, apellido, email, telefono, pais, ciudad, password) {
+    this.id = numberUser(identificacionMin, identificacionMax),
+    this.nombre = nombre,
+    this.apellido = apellido,
+    this.email = email,
+    this.telefono = telefono,
+    this.pais = pais,
+    this.ciudad = ciudad,
+    this.password = password
+}
+
+const nuevoUsuario = new Formulario(nombre, apellido, email, telefono, pais, ciudad, password)
 
 // console.log(nuevoUsuario);
 
+// ***FUNCION DE PUSH AL ARRAY USUARIOS !!!
 
+function cargarUsuario (arr, valor) {
+    arr.push(valor);
+};
+cargarUsuario(datosUsuarios, nuevoUsuario);
 
-// function cargarUsuario (arr, valor) {
-//     arr.push(valor);
-// }
-// cargarUsuario(datosUsuarios, nuevoUsuario);
+console.log(datosUsuarios);
 
-// console.log(datosUsuarios);
  
+
 // // ***FOR OF ? PARA RECORRER EL ARRAY, FILTER PARA DEVOLVER ID DE USER A TRAVEZ DE UN MAP
 //  (***MEJORAR EL FILTRO ***)
 
@@ -127,8 +135,3 @@ password.addEventListener('input', () =>{
 
 
 
-//  LOCAL STORAGE
-
-/* const guardarLocalStorage = () => {
-    localStorage.setItem("Nombre", nombre.value)
-}; */

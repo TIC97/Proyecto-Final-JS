@@ -39,7 +39,7 @@ registro.addEventListener('submit', (e) => {
         password = document.getElementById('password').value
     const nuevoUsuario = new Formulario(nombre, apellido, email, telefono, pais, ciudad, password)
     datosUsuarios.push(nuevoUsuario)
-    console.log(nuevoUsuario)
-    localStorage.setItem("usuario", JSON.stringify(nuevoUsuario))
+    console.log(datosUsuarios)
+    localStorage.setItem("usuario", JSON.stringify(datosUsuarios))
 
 })

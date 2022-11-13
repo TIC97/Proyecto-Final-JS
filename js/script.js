@@ -24,6 +24,29 @@ function borrarCampo() {
     password.value = "";
 }
 
+function controlCampos(){
+    if (nombre.value == "" || apellido.value =="" || email.value == "" || telefono.value ==""){
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Verifica los campos !!',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
+    } else {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Exito !!',
+            text:'Registro Exitoso',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    }
+}
+
+// ***DOM (MODIFICO EL INPUT DE REGISTRO)
+registro.value = 'Registro !!!';
+
 // ***ARRAY DE USAURIOS !!!
 
 const datosUsuarios = [];
@@ -56,7 +79,8 @@ registro.addEventListener('submit', (e) => {
         telefono = document.getElementById('telefono').value,
         pais = document.getElementById('pais').value,
         ciudad = document.getElementById('ciudad').value,
-        password = document.getElementById('password').value
+        password = document.getElementById('password').value;
+    controlCampos()
     const nuevoUsuario = new Formulario(nombre, apellido, email, telefono, pais, ciudad, password)
     datosUsuarios.push(nuevoUsuario)
     borrarCampo()

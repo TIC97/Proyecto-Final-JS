@@ -85,6 +85,16 @@ registro.addEventListener('submit', (e) => {
     datosUsuarios.push(nuevoUsuario)
     borrarCampo()
     console.log(datosUsuarios)
+    // *** DATOS EN JSON !!! 
     localStorage.setItem("usuario", JSON.stringify(datosUsuarios))
 
 })
+
+
+
+// ***FOR OF ? PARA RECORRER EL ARRAY, FILTER PARA DEVOLVER ID DE USER A TRAVEZ DE UN MAP
+//  (***MEJORAR EL FILTRO ***)
+
+// const cantidadUsers = datosUsuarios.map((el) => { return el.id})
+
+// console.log(cantidadUsers);

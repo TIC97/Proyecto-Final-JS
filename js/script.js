@@ -7,7 +7,7 @@ const nombre = document.getElementById('nombre'),
     password = document.getElementById('password');
 
 
-const registro = document.getElementById('form-register');
+const registro = document.getElementById('register');
 
 function numberUser(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -45,7 +45,7 @@ function controlCampos(){
 }
 
 // ***DOM (MODIFICO EL INPUT DE REGISTRO)
-registro.value = 'Registro !!!';
+registro.value = 'Registrarme !!!';
 
 // ***ARRAY DE USAURIOS !!!
 

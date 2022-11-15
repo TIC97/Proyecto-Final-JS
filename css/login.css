@@ -1,4 +1,9 @@
+body{
+    background: rgb(127, 100, 177);
+    background: linear-gradient(to right,rgb(102, 79, 146), rgb(127, 100, 177);
+}
 .bg {
-    background-image: url("ima" );
+    background-image: url(imagenes/login.jpg);
     background-position: center center;
+
 }

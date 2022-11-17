@@ -9,3 +9,6 @@ const emailRegistro = document.getElementById('email'),
     inicioSecion = document.getElementById('login');
 
 
+function ingresarSesion() {
+    
+};

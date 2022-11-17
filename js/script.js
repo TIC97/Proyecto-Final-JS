@@ -25,7 +25,7 @@ function borrarCampo() {
 }
 
 function controlCampos(){
-    if (nombre.value == "" || apellido.value =="" || email.value == "" || telefono.value ==""){
+    if (nombre.value == "" || apellido.value =="" || email.value == "" || telefono.value =="" || pais.value == "" || ciudad.value == "" || password.value == ""){
         Swal.fire({
             icon: 'error',
             title: 'Error',

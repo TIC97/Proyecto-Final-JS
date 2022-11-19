@@ -7,7 +7,7 @@ const nombre = document.getElementById('nombre'),
     password = document.getElementById('password');
 
 
-const registro = document.getElementById('register');
+const registro = document.getElementById('form-register');
 
 function numberUser(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -43,6 +43,16 @@ function controlCampos(){
           })
     }
 }
+
+// CONVERSION A JSON A STRING (DATOS DE USUARIO) SINO ARRAY VACIO !!! (NO MEFUNCIONA)
+
+/* if (localStorage.getItem("email")) {
+    datosUsuarios = JSON.parse(localStorage.getItem("email"));
+} else {
+    datosUsuarios = [] ;
+} */
+
+
 
 // ***DOM (MODIFICO EL INPUT DE REGISTRO)
 registro.value = 'Registrarme !!!';
@@ -85,9 +95,8 @@ registro.addEventListener('submit', (e) => {
     datosUsuarios.push(nuevoUsuario)
     borrarCampo()
     console.log(datosUsuarios)
-    // *** DATOS EN JSON !!! 
+    // *** DATOS DE STRING A JSON !!! 
     localStorage.setItem("usuario", JSON.stringify(datosUsuarios))
-
 })
 
 

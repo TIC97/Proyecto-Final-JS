@@ -1,16 +1,10 @@
-// *** TRAER DATOS DE MI LOCAL STORAGE PARA LOGIN !!!
-// /* const guardarArray = () => {
-//     JSON.parse(localStorage.getItem(datosUsuarios)) || [];
-// };
-// guardarArray(); */
-
 const emailLogin = document.getElementById('email'),
     passLogin = document.getElementById('password'), 
-    inicioSecion = document.getElementById('login');
+    inicioSesion = document.getElementById('login-ingreso');
 
 
 function ingresarSesion(usuarios) {
-    let userFound = datosUsuarios.find((usuario)=> {
+    let userFound = datosUsuarios.find((usuarios)=> {
         return usuario.email === emailLogin.value && usuario.password === passLogin.value
     })
     if (userFound){
@@ -20,13 +14,24 @@ function ingresarSesion(usuarios) {
         // sweetalert ("usuario no encontrado")
         Swal.fire({
             icon: 'error',
-            title: 'Usuario NO encontradp',
-            text: 'ingrese el usario correcto',
+            title: 'Usuario NO encontrado',
+            text: 'Ingrese el usario correcto',
             footer: '<a href="">Why do I have this issue?</a>'
           })
     }
     return userFound;
 };
 
+// *** TRAER DATOS DE MI LOCAL STORAGE PARA LOGIN !!!
+function recuperarLS () {
+    let datos = JSON.parse(localStorage.getItem(datosUsuarios));
+    return datos;
+};
 
-// *** PONER ALERT PARA DECIR USUARIO INCORRECTO !! 
+const usuarioLS = recuperarLS();
+
+// ***EVENTOS DEL SUBMIT ("INICIAR SESION")
+inicioSesion.addEventListener('submit', (e) => {
+    e.preventDefault();
+    ingresarSesion(usuarioLS)
+})

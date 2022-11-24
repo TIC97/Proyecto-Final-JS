@@ -1,7 +1,7 @@
 const emailLogin = document.getElementById('email'),
     passLogin = document.getElementById('password'), 
-    inicioSesion = document.getElementById('login-ingreso');
-
+    inicioSesion = document.queryCommandValue('input[type="submit"]'); 
+    
 
 function ingresarSesion(usuarios) {
     let userFound = datosUsuarios.find((usuarios)=> {
@@ -9,7 +9,8 @@ function ingresarSesion(usuarios) {
     })
     if (userFound){
         //REDIRIGIR A MI PAGE DE INICIO
-        window.location.href="./index.html"
+        // window.location.href="https://www.google.com/webhp?hl=es-419&sa=X&ved=0ahUKEwjF7oT9x8X7AhVArpUCHXq2CTYQPAgI"
+        console.log("estoy en el IF");
     }else{
         // sweetalert ("usuario no encontrado")
         Swal.fire({
@@ -24,7 +25,7 @@ function ingresarSesion(usuarios) {
 
 // *** TRAER DATOS DE MI LOCAL STORAGE PARA LOGIN !!!
 function recuperarLS () {
-    let datos = JSON.parse(localStorage.getItem(datosUsuarios));
+    let datos = JSON.parse(localStorage.getItem("datosUsuarios"));
     return datos;
 };
 
@@ -33,5 +34,12 @@ const usuarioLS = recuperarLS();
 // ***EVENTOS DEL SUBMIT ("INICIAR SESION")
 inicioSesion.addEventListener('submit', (e) => {
     e.preventDefault();
-    ingresarSesion(usuarioLS)
+    ingresarSesion(guardarLS)
+    // console.log("estoy aqui");
 })
+
+
+// ***MEJORAR EL FILTRO DE DATOS
+// const cantidadUsers = datosUsuarios.map((el) => { return el.id})
+
+// console.log(cantidadUsers);

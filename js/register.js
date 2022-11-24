@@ -46,12 +46,15 @@ function controlCampos(){
 
 // CONVERSION A JSON A STRING (DATOS DE USUARIO) SINO ARRAY VACIO !!! (NO MEFUNCIONA)
 
-/* if (localStorage.getItem("email")) {
-    datosUsuarios = JSON.parse(localStorage.getItem("email"));
+if (localStorage.getItem("usuario")) {
+    datosUsuarios = JSON.parse(localStorage.getItem("usuario"));
 } else {
     datosUsuarios = [] ;
-} */
+}
 
+function guardarLS() {
+    localStorage.setItem("usuario", JSON.stringify(datosUsuarios))
+};
 
 
 // ***DOM (MODIFICO EL INPUT DE REGISTRO)
@@ -96,14 +99,10 @@ registro.addEventListener('submit', (e) => {
     borrarCampo()
     console.log(datosUsuarios)
     // *** DATOS DE STRING A JSON !!! 
-    localStorage.setItem("usuario", JSON.stringify(datosUsuarios))
+    guardarLS(nuevoUsuario)
+    // localStorage.setItem("usuario", JSON.stringify(datosUsuarios))
 })
 
-// *** IMPLEMENTAR LA REDIRECCION HACIA LA PAGE HOME 
-// window.location.href="./index.html";
-
-// ***FOR OF ? PARA RECORRER EL ARRAY, FILTER PARA DEVOLVER ID DE USER A TRAVEZ DE UN MAP
-//  (***MEJORAR EL FILTRO ***)
 
 // const cantidadUsers = datosUsuarios.map((el) => { return el.id})
 

@@ -4,7 +4,8 @@ const nombre = document.getElementById('nombre'),
     telefono = document.getElementById('telefono'),
     pais = document.getElementById('pais'),
     ciudad = document.getElementById('ciudad'),
-    password = document.getElementById('password');
+    password = document.getElementById('password'),
+    botonRegistro = document.querySelector(".btn");
 
 
 const registro = document.getElementById('form-register');
@@ -46,11 +47,11 @@ function controlCampos(){
 
 // CONVERSION A JSON A STRING (DATOS DE USUARIO) SINO ARRAY VACIO !!! (NO MEFUNCIONA)
 
-if (localStorage.getItem("usuario")) {
+/* if (localStorage.getItem("usuario")) {
     datosUsuarios = JSON.parse(localStorage.getItem("usuario"));
 } else {
     datosUsuarios = [] ;
-}
+} */
 
 function guardarLS() {
     localStorage.setItem("usuario", JSON.stringify(datosUsuarios))
@@ -58,7 +59,7 @@ function guardarLS() {
 
 
 // ***DOM (MODIFICO EL INPUT DE REGISTRO)
-registro.value = 'Registrarme !!!';
+botonRegistro.value = 'Registrarme !!!';
 
 // ***ARRAY DE USAURIOS !!!
 
@@ -83,7 +84,6 @@ class Formulario {
 
 
 registro.addEventListener('submit', (e) => {
-
     e.preventDefault();
     console.log(e.target);
     const nombre = document.getElementById('nombre').value,
@@ -100,7 +100,7 @@ registro.addEventListener('submit', (e) => {
     console.log(datosUsuarios)
     // *** DATOS DE STRING A JSON !!! 
     guardarLS(nuevoUsuario)
-    // localStorage.setItem("usuario", JSON.stringify(datosUsuarios))
+    /* localStorage.setItem("usuario", JSON.stringify(datosUsuarios)) */
 })
 
 

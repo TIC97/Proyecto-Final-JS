@@ -20,6 +20,7 @@ function ingresarSesion(usuarios) {
             footer: '<a href="">Why do I have this issue?</a>'
           })
     }
+    console.log("afuera del condicional");
     return userFound;
 };
 

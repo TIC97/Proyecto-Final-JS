@@ -45,7 +45,7 @@ function controlCampos(){
     }
 }
 
-// CONVERSION A JSON A STRING (DATOS DE USUARIO) SINO ARRAY VACIO !!! (NO MEFUNCIONA)
+// CONVERSION A JSON A STRING (DATOS DE USUARIO) SINO ARRAY VACIO !!! (NO ME FUNCIONA)
 
 /* if (localStorage.getItem("usuario")) {
     datosUsuarios = JSON.parse(localStorage.getItem("usuario"));

@@ -44,6 +44,7 @@ function controlCampos(){
           })
     }
 }
+const datosUsuarios = [];
 
 // CONVERSION A JSON A STRING (DATOS DE USUARIO) SINO ARRAY VACIO !!! (NO ME FUNCIONA)
 
@@ -63,7 +64,7 @@ botonRegistro.value = 'Registrarme !!!';
 
 // ***ARRAY DE USAURIOS !!!
 
-const datosUsuarios = [];
+// const datosUsuarios = [];
 
 // ***FUNCION COSNTRUCTORA !!!
 const identificacionMax = 10000;
